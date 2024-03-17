@@ -22,6 +22,10 @@ jobs:
           key: cache-{{ checksum "/tmp/CIRCLECI_CACHE_KEY" }}
           paths:
             - ~/.m2/repository
+      - persist_to_workspace:
+          root: target
+          paths:
+            - site/jacoco
   deploy:
     # This is an example deploy job, not actually used by the workflow
     docker:
@@ -31,16 +35,24 @@ jobs:
       - run:
           name: deploy
           command: '#e.g. ./deploy.sh'
-orbs:
-  codecov: codecov/codecov@4.0.1
+  upload-coverage:
+    docker:
+      - image: circleci/python:3.7.5
+    steps:
+      - attach_workspace:
+          at: ./
+      - run:
+          name: Upload coverage to Codecov
+          command: |
+            pip install codecov
+            codecov -X jacoco
 workflows:
-  upload-to-codecov:
-    jobs:
-      - checkout
-      - codecov/upload
   build-and-test:
     jobs:
       - test-java
+      - upload-coverage:
+          requires:
+            - test-java
     # - deploy:
     #     requires:
     #       - test-java
