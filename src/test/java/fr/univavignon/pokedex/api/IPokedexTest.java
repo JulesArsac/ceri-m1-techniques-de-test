@@ -12,7 +12,6 @@ public class IPokedexTest {
     @Before
     public void setUp() {
         pokedex = mock(IPokedex.class);
-
     }
 
 }
