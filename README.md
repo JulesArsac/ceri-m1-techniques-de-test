@@ -1,5 +1,19 @@
 # UCE Génie Logiciel Avancé : Techniques de tests
 
+
+## Informations
+
+- **Nom:** Jules ARSAC
+- **Groupe:** M1-ILSEN-CLASSIQUE
+
+## Build & Test Status
+
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/JulesArsac/ceri-m1-techniques-de-test/tree/master.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/JulesArsac/ceri-m1-techniques-de-test/tree/master)
+
+## Code Coverage
+
+[![codecov](https://codecov.io/gh/JulesArsac/ceri-m1-techniques-de-test/graph/badge.svg?token=R7E05TYFQS)](https://codecov.io/gh/JulesArsac/ceri-m1-techniques-de-test)
+
 ## Introduction
 
 Vous allez à travers ces projet mettre en application une partie des aspects évoqués en cours vis à vis des techniques de tests.  
