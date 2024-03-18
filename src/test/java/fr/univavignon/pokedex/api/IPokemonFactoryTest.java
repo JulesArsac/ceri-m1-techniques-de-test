@@ -4,6 +4,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
@@ -28,6 +29,7 @@ public class IPokemonFactoryTest {
         assertEquals(4000, pokemon.getDust());
         assertEquals(4, pokemon.getCandy());
         assertEquals(56.0, pokemon.getIv(), 0);
+        assertNull(pokemonFactory.createPokemon(151, 613, 64, 4000, 4));
     }
 
 }
