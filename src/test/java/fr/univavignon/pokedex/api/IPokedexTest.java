@@ -7,57 +7,43 @@ import java.util.Comparator;
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
 
 public class IPokedexTest {
 
     private IPokedex pokedex;
-    public Pokemon pokemon = new Pokemon(3, "Jules", 3, 2000, 1,
-            0, 1000, 4, 2, 2);
 
     @Before
     public void setUp() throws PokedexException {
-        pokedex = mock(IPokedex.class);
-        when(pokedex.getPokemons()).thenReturn(
-                List.of(
-                        new Pokemon(0, "Bulbizarre", 120, 126, 90, 0, 100, 0, 0, 0),
-                        new Pokemon(1, "Salamèche", 126, 126, 90, 0, 150, 0, 0, 0),
-                        new Pokemon(2, "Kaiminus", 220, 126, 55, 0, 200, 0, 0, 0)
-                )
-        );
-        when (pokedex.getPokemon(0)).thenReturn(
-                new Pokemon(0, "Bulbizarre", 126, 126, 90, 0, 0, 0, 0, 0)
-        );
+        pokedex = new Pokedex(new PokemonFactory(), new PokemonMetadataProvider());
+        pokedex.addPokemon(pokedex.createPokemon(0, 613, 64, 4000, 4));
+        pokedex.addPokemon(pokedex.createPokemon(1, 518, 55, 4000, 4));
     }
 
     @Test
     public void testGetPokemon() throws PokedexException {
-        PokemonMetadata metadata = pokedex.getPokemon(0);
-        assertEquals("Bulbizarre", metadata.getName());
-        assertEquals(126, metadata.getAttack());
-        assertEquals(126, metadata.getDefense());
-        assertEquals(90, metadata.getStamina());
+        Pokemon pokemon = pokedex.getPokemon(0);
+        assertEquals("Bulbizarre", pokemon.getName());
+        assertEquals(126, pokemon.getAttack());
+        assertEquals(126, pokemon.getDefense());
+        assertEquals(90, pokemon.getStamina());
+        assertEquals(4, pokemon.getCandy());
     }
 
     @Test
     public void testGetPokemons() {
         List<Pokemon> pokemons = pokedex.getPokemons();
-        assertEquals(3, pokemons.size());
+        assertEquals(2, pokemons.size());
         assertEquals("Bulbizarre", pokemons.get(0).getName());
-        assertEquals("Salamèche", pokemons.get(1).getName());
-        assertEquals("Kaiminus", pokemons.get(2).getName());
-        assertEquals(55, pokemons.get(2).getStamina());
+        assertEquals("Herbizarre", pokemons.get(1).getName());
     }
 
     @Test
     public void testGetPokemonsSorted() {
-        List<Pokemon> pokemons = pokedex.getPokemons();
-        Comparator<Pokemon> comparator = Comparator.comparing(Pokemon::getName);
-        List<Pokemon> sortedPokemons = pokemons.stream().sorted(comparator).toList();
-        assertEquals("Bulbizarre", sortedPokemons.get(0).getName());
-        assertEquals("Kaiminus", sortedPokemons.get(1).getName());
-        assertEquals("Salamèche", sortedPokemons.get(2).getName());
+        //Sort by name reverse
+        List<Pokemon> pokemons = pokedex.getPokemons((p1, p2) -> p2.getName().compareTo(p1.getName()));
+        assertEquals(2, pokemons.size());
+        assertEquals("Herbizarre", pokemons.get(0).getName());
+        assertEquals("Bulbizarre", pokemons.get(1).getName());
     }
 
 }
