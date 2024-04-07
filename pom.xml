@@ -58,6 +58,7 @@
                     <configLocation>checkstyle.xml</configLocation>
                     <consoleOutput>true</consoleOutput>
                     <failsOnError>true</failsOnError>
+                    <outputDirectory>checkstyle</outputDirectory>
                 </configuration>
             </plugin>
             <plugin>
@@ -75,7 +76,7 @@
                             <outputDir>target/site/badges</outputDir>
                             <inputFiles>
                                 <inputFile>target/checkstyle-result.xml</inputFile>
-                                <inputFile>target/site/checkstyle.html</inputFile>
+                                <inputFile>checkstyle/checkstyle.html</inputFile>
                             </inputFiles>
                         </configuration>
                     </execution>
