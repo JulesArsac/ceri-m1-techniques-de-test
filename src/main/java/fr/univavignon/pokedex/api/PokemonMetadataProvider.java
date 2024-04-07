@@ -4,8 +4,12 @@ import com.google.gson.*;
 
 import java.util.HashMap;
 
-public class PokemonMetadataProvider implements IPokemonMetadataProvider{
 
+public class PokemonMetadataProvider implements IPokemonMetadataProvider {
+
+    /**
+     * HashMap containing the metadata of the pokemons
+     */
     private static final HashMap<Integer, PokemonMetadata> pokemonMetadataHashMap = new HashMap<>();
 
     public PokemonMetadataProvider() {

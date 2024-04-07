@@ -6,10 +6,25 @@ import java.util.List;
 
 public class Pokedex implements IPokedex {
 
+    /**
+     * List of pokemons in the pokedex.
+     */
     private List<Pokemon> pokedex;
+    /**
+     * Factory used to create pokemons.
+     */
     private PokemonFactory pokemonFactory;
+    /**
+     * Provider used to get metadata of pokemons.
+     */
     private PokemonMetadataProvider pokemonMetadataProvider;
 
+    /**
+     * Constructor.
+     *
+     * @param pokemonFactory Factory used to create pokemons.
+     * @param pokemonMetadataProvider Provider used to get metadata of pokemons.
+     */
     public Pokedex(PokemonFactory pokemonFactory, PokemonMetadataProvider pokemonMetadataProvider) {
         pokedex = new ArrayList<>();
         this.pokemonFactory = pokemonFactory;
@@ -40,17 +55,20 @@ public class Pokedex implements IPokedex {
         return pokedex;
     }
 
+    /** {@inheritDoc} */
     @Override
     public List<Pokemon> getPokemons(Comparator<Pokemon> order) {
         pokedex.sort(order);
         return pokedex;
     }
 
+    /** {@inheritDoc} */
     @Override
     public Pokemon createPokemon(int index, int cp, int hp, int dust, int candy) {
         return pokemonFactory.createPokemon(index, cp, hp, dust, candy);
     }
 
+    /** {@inheritDoc} */
     @Override
     public PokemonMetadata getPokemonMetadata(int index) throws PokedexException {
         return pokemonMetadataProvider.getPokemonMetadata(index);

@@ -25,9 +25,9 @@ under the License.
     <language>en-us</language>
     <copyright>&#169;2024</copyright>
     <item>
-      <title>File: 6,
+      <title>File: 0,
              Errors: 0,
-             Warnings: 21,
+             Warnings: 0,
              Infos: 0
       </title>
             <link>http://univ-avignon.fr/checkstyle.html</link>
@@ -44,90 +44,6 @@ under the License.
             </tr>
           </thead>
           <tbody>
-                          <tr>
-                <td>
-                  <a href="http://univ-avignon.fr/checkstyle.html#fr.univavignon.pokedex.api.PokemonTrainer.java">fr/univavignon/pokedex/api/PokemonTrainer.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  3
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://univ-avignon.fr/checkstyle.html#fr.univavignon.pokedex.api.Team.java">fr/univavignon/pokedex/api/Team.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  3
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://univ-avignon.fr/checkstyle.html#fr.univavignon.pokedex.api.Pokedex.java">fr/univavignon/pokedex/api/Pokedex.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  3
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://univ-avignon.fr/checkstyle.html#fr.univavignon.pokedex.api.Pokemon.java">fr/univavignon/pokedex/api/Pokemon.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  5
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://univ-avignon.fr/checkstyle.html#fr.univavignon.pokedex.api.PokemonMetadata.java">fr/univavignon/pokedex/api/PokemonMetadata.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  5
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://univ-avignon.fr/checkstyle.html#fr.univavignon.pokedex.api.PokemonMetadataProvider.java">fr/univavignon/pokedex/api/PokemonMetadataProvider.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  2
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
                       </tbody>
         </table>
         
