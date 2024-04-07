@@ -50,9 +50,6 @@ workflows:
   build-and-test:
 
     jobs:
-      - filters:
-          branches:
-            only: master
       - test-java
       - upload-coverage:
           requires:
