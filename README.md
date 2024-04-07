@@ -14,6 +14,11 @@
 
 [![codecov](https://codecov.io/gh/JulesArsac/ceri-m1-techniques-de-test/graph/badge.svg?token=R7E05TYFQS)](https://codecov.io/gh/JulesArsac/ceri-m1-techniques-de-test)
 
+## Checkstyle
+
+[![Checkstyle](https://gist.githubusercontent.com/JulesArsac/dd73e48d34d50771b12e36f355d6701f/raw/ef0ca7382ca3c0c59bf5fc6ef27ef8a557b5e64e/checkstyle.svg)](target/site/badges/checkstyle.html)
+
+
 ## Introduction
 
 Vous allez à travers ces projet mettre en application une partie des aspects évoqués en cours vis à vis des techniques de tests.  
