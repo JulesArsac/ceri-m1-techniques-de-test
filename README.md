@@ -16,7 +16,7 @@
 
 ## Checkstyle
 
-[![Checkstyle](https://gist.githubusercontent.com/JulesArsac/dd73e48d34d50771b12e36f355d6701f/raw/ef0ca7382ca3c0c59bf5fc6ef27ef8a557b5e64e/checkstyle.svg)](target/site/badges/checkstyle.html)
+[![Checkstyle](resources/checkstyle-result.svg)](resources/checkstyle.html)
 
 
 ## Introduction
