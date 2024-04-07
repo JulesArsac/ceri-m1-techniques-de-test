@@ -12,9 +12,7 @@ public class IPokemonMetadataProviderTest {
 
     @Before
     public void setUp() throws PokedexException {
-        pokemonMetadataProvider = mock(IPokemonMetadataProvider.class);
-        when(pokemonMetadataProvider.getPokemonMetadata(0)).thenReturn(new PokemonMetadata(0, "Bulbizarre", 126, 126, 90));
-        when(pokemonMetadataProvider.getPokemonMetadata(151)).thenThrow(new PokedexException("Invalid index"));
+        pokemonMetadataProvider = new PokemonMetadataProvider();
     }
 
     @Test
