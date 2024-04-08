@@ -1,7 +1,7 @@
 # Revue de code de la Team Rocket
 
 ## Utilisation d'un objet Map inutile
-Pourquoi ne pas simplement utiliser le metadata provider? Cela permettrait en plus d'éviter une redondance des données, de supprimer la dépendance apache.commons.
+Pourquoi ne pas simplement utiliser le metadata provider? Cela permettrait en plus d'éviter une redondance des données, de supprimer la dépendance apache.commons qui apporte des vulnérabilités.
 
 ## Création de pokémons inexistants
 Si l'index n'est pas présent dans la map, pourquoi ne créer un missingNo en conservant l'index donné en argument? Là encore, pourquoi ne pas utiliser le metadata provider pour profiter des PokedexExceptions?
