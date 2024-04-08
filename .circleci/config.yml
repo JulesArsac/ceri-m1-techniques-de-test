@@ -51,12 +51,12 @@ workflows:
 
     jobs:
       - test-java:
-          filter:
+          filters:
             branches:
               only:
                 - master
       - upload-coverage:
-          filter:
+          filters:
             branches:
               only:
                 - master
